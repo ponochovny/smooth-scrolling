@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/smooth-scrolling/static/css/main.cb2677b3.chunk.css",
+    "main.js": "/smooth-scrolling/static/js/main.f3c782b0.chunk.js",
+    "main.js.map": "/smooth-scrolling/static/js/main.f3c782b0.chunk.js.map",
+    "runtime-main.js": "/smooth-scrolling/static/js/runtime-main.1a6b6f3d.js",
+    "runtime-main.js.map": "/smooth-scrolling/static/js/runtime-main.1a6b6f3d.js.map",
+    "static/js/2.73ed7a84.chunk.js": "/smooth-scrolling/static/js/2.73ed7a84.chunk.js",
+    "static/js/2.73ed7a84.chunk.js.map": "/smooth-scrolling/static/js/2.73ed7a84.chunk.js.map",
+    "index.html": "/smooth-scrolling/index.html",
+    "precache-manifest.b2931e063f88e479fc9bfa93b8b0c557.js": "/smooth-scrolling/precache-manifest.b2931e063f88e479fc9bfa93b8b0c557.js",
+    "service-worker.js": "/smooth-scrolling/service-worker.js",
+    "static/css/main.cb2677b3.chunk.css.map": "/smooth-scrolling/static/css/main.cb2677b3.chunk.css.map",
+    "static/js/2.73ed7a84.chunk.js.LICENSE.txt": "/smooth-scrolling/static/js/2.73ed7a84.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a6b6f3d.js",
+    "static/js/2.73ed7a84.chunk.js",
+    "static/css/main.cb2677b3.chunk.css",
+    "static/js/main.f3c782b0.chunk.js"
+  ]
+}
