@@ -1,14 +1,14 @@
-import React, { useRef, useEffect } from 'react';
-import './App.scss';
+import React, { useRef, useEffect } from 'react'
+import './App.scss'
 
-import useWindowSize from './hooks/useWindowSize';
+import useWindowSize from './hooks/useWindowSize'
 
 function App() {
 	// Hook
-	const size = useWindowSize();
+	const size = useWindowSize()
 	// REF
-	const app = useRef();
-	const scrollContainer = useRef();
+	const app = useRef()
+	const scrollContainer = useRef()
 
 	// Configs
 	const skewConfigs = {
@@ -16,48 +16,43 @@ function App() {
 		current: 0,
 		previous: 0,
 		rounded: 0,
-	};
+	}
 
 	// Run scrollrender once page is loaded.
 	useEffect(() => {
-		// console.log(skewScrolling);
 		requestAnimationFrame(() => {
-			// console.log(skewScrolling);
-			skewScrolling();
-		});
-		// skewScrolling();
-	}, []);
+			skewScrolling()
+		})
+		// eslint-disable-next-line
+	}, [])
 
 	useEffect(() => {
-		setBodyHeight();
-	}, [size.height]);
+		setBodyHeight()
+	}, [size.height])
 
 	const setBodyHeight = () => {
 		document.body.style.height = `${
 			scrollContainer.current.getBoundingClientRect().height
-		}px`;
-	};
+		}px`
+	}
 
 	const skewScrolling = () => {
-		// console.log(window.screenY);
-		skewConfigs.current = window.scrollY;
+		skewConfigs.current = window.scrollY
 		skewConfigs.previous +=
-			(skewConfigs.current - skewConfigs.previous) * skewConfigs.ease;
-		skewConfigs.rounded = Math.round(skewConfigs.previous * 100) / 100;
-
-		// console.log(skewConfigs);
+			(skewConfigs.current - skewConfigs.previous) * skewConfigs.ease
+		skewConfigs.rounded = Math.round(skewConfigs.previous * 100) / 100
 
 		// variables
-		const difference = skewConfigs.current - skewConfigs.rounded;
-		const acceleration = difference / size.width;
-		const velocity = +acceleration;
-		const skew = velocity * 10; // 7.5
+		const difference = skewConfigs.current - skewConfigs.rounded
+		const acceleration = difference / size.width
+		const velocity = +acceleration
+		const skew = velocity * 10 // 7.5
 
 		//
-		scrollContainer.current.style.transform = `translate3d(0, -${skewConfigs.rounded}px, 0) skewY(${skew}deg)`;
+		scrollContainer.current.style.transform = `translate3d(0, -${skewConfigs.rounded}px, 0) skewY(${skew}deg)`
 
-		requestAnimationFrame(() => skewScrolling());
-	};
+		requestAnimationFrame(() => skewScrolling())
+	}
 
 	return (
 		<div ref={app} className="App">
@@ -92,7 +87,7 @@ function App() {
 				<img src="https://picsum.photos/id/110/600/400" alt="" />
 			</div>
 		</div>
-	);
+	)
 }
 
-export default App;
+export default App
